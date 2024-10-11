@@ -29,29 +29,11 @@ class ProfilePage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image:
-                                AssetImage('assets/icons/icon_arrow_back.png'),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage('assets/icons/icon_setting.png'),
-                          ),
-                        ),
-                      ),
+                      IconButton(
+                          onPressed: () {
+                            print("setting");
+                          },
+                          icon: const Icon(Icons.settings)),
                     ],
                   ),
                   Column(
@@ -341,7 +323,7 @@ class ProfilePage extends StatelessWidget {
             minHeight: 6,
             borderRadius: BorderRadius.circular(6),
             backgroundColor: Colors.grey.shade300,
-            color: const Color(0XFFF0F32DA),
+            color: const Color(0xfff0f32da),
           ),
         ),
       ],

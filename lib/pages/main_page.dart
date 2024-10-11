@@ -23,7 +23,7 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    const Color selectedColor = Color(0XFFF0F32DA);
+    const Color selectedColor = Color(0xfff0f32da);
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -36,19 +36,13 @@ class _MainPageState extends State<MainPage> {
           color: selectedColor,
         ),
         type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_home.png',
-              color: _selectedIndex == 0 ? selectedColor : Colors.grey,
-            ),
+            icon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_user.png',
-              color: _selectedIndex == 0 ? selectedColor : Colors.grey,
-            ),
+            icon: Icon(Icons.person),
             label: 'Profile',
           ),
         ],

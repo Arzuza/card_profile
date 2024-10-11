@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                                 .textTheme
                                 .bodyMedium!
                                 .copyWith(
-                                  color: Colors.grey,
+                                  color: Colors.black,
                                 ),
                           )
                         ],
@@ -50,19 +50,11 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  height: 50,
-                  width: 50,
-                  decoration: const BoxDecoration(
-                    color: Color(0XFFF0F32DA),
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: AssetImage(
-                        'assets/icons/icon_notif.png',
-                      ),
-                    ),
-                  ),
-                )
+                IconButton(
+                    onPressed: () {
+                      print("Notifikasi");
+                    },
+                    icon: const Icon(Icons.notifications)),
               ],
             ),
             const SizedBox(height: 25),
@@ -73,13 +65,13 @@ class HomePage extends StatelessWidget {
                   height: 140,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: const Color(0XFFF0F32DA),
+                    color: const Color(0xfff0f32da),
                     borderRadius: BorderRadius.circular(20),
                     gradient: const RadialGradient(
                       center: Alignment(0.4, 0),
                       colors: [
                         Colors.white,
-                        Color(0XFFF0F32DA),
+                        Color(0xfff0f32da),
                       ],
                     ),
                   ),
@@ -217,7 +209,7 @@ class HomePage extends StatelessWidget {
                         children: [
                           const CircleAvatar(
                             radius: 30,
-                            backgroundColor: Color(0XFFF0F32DA),
+                            backgroundColor: Color(0xfff0f32da),
                           ),
                           const SizedBox(width: 15),
                           Text(
@@ -244,7 +236,7 @@ class HomePage extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                'Sept 2024',
+                                'Oct 2024',
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyMedium
@@ -311,13 +303,13 @@ class HomePage extends StatelessWidget {
                                   backgroundColor: Colors.white,
                                   elevation: 0,
                                   side: const BorderSide(
-                                    color: Color(0XFFF0F32DA),
+                                    color: Color(0xfff0f32da),
                                   ),
                                 ),
                                 child: const Text(
                                   'View Details',
                                   style: TextStyle(
-                                    color: Color(0XFFF0F32DA),
+                                    color: Color(0xfff0f32da),
                                   ),
                                 ),
                               ),
@@ -330,7 +322,7 @@ class HomePage extends StatelessWidget {
                               child: ElevatedButton(
                                 onPressed: () {},
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0XFFF0F32DA),
+                                  backgroundColor: const Color(0xfff0f32da),
                                   elevation: 0,
                                 ),
                                 child: const Text(
@@ -359,21 +351,21 @@ class HomePage extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
       decoration: BoxDecoration(
-        color: const Color(0XFFF0F32DA).withOpacity(0.1),
+        color: const Color(0xfff0f32da).withOpacity(0.1),
         borderRadius: BorderRadius.circular(30),
       ),
       child: Row(
         children: [
           Icon(
             icon,
-            color: const Color(0XFFF0F32DA),
+            color: const Color(0xfff0f32da),
             size: 30,
           ),
           const SizedBox(width: 15),
           Text(
             label,
             style: const TextStyle(
-              color: Color(0XFFF0F32DA),
+              color: Color(0xfff0f32da),
               fontSize: 16,
             ),
           ),
